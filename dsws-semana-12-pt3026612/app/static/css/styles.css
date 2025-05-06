@@ -1,0 +1,114 @@
+/* static/css/styles.css */
+
+/* Estilos gerais para o body e elementos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.page-header {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0000CD;
+}
+
+/* Alerta Warning com transição de opacidade */
+.alert-warning {
+    background-color: #ffc107;
+    color: #212529;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Centraliza ícone e texto */
+    gap: 10px; /* Espaço entre ícone e texto */
+    opacity: 1; /* Inicialmente visível */
+    transition: opacity 0.5s ease-out; /* Transição suave para esconder o alert */
+}
+
+.navbar {
+    margin-bottom: 30px;
+    background-color: #343a40;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #ffffff !important;
+}
+
+/* Estilo para botões e inputs comuns */
+button, input, select, textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    max-width: 400px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out; /* Transição de hover para botão */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Efeito hover na tabela */
+}
+
+/* Estilo para footer */
+/* Estilo para footer fixo na parte inferior da página */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Garantindo que o footer ocupe toda a largura da página */
+    background-color: #343a40; /* Cor de fundo do footer */
+    color: #ffffff; /* Cor do texto */
+    text-align: center;
+    padding: 20px 0;
+    height: 50px; /* Altura do footer */
+}
+footer p {
+    margin: 0;
+}
+
+
+/* Estilo para ocultar mensagens flash do Bootstrap 3 */
+.alert {
+    transition: opacity 0.5s ease-in-out; /* Animação de fade out para mensagens flash */
+}
+
+.alert.d-none {
+    opacity: 0; /* Transição para desaparecer */
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
