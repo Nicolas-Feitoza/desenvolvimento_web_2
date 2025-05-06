@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Olá, {% if name %}{{ name }}{% else %}parece que é sua primeira vez por aqui{% endif %}!</h1>
+    {% if not known %}
+    <p>É um prazer conhecê-lo(a)!</p>
+    {% else %}
+    <p>É ótimo vê-lo(a) aqui novamente!</p>
+    {% endif %}
+</div>
+
+{% if known %}
+    <div class="alert alert-info">
+        {{ flash() }}
+        <p>Quer alterar seu nome?</p>
+        <form method="post" class="form-inline">
+            {{ wtf.hidden_tag() }}
+            {{ wtf.text_field(form.name, class='form-control', placeholder='Digite seu novo nome') }}
+            {{ wtf.submit_button('Alterar Nome', class='btn btn-primary') }}
+        </form>
+    </div>
+{% else %}
+    {{ wtf.quick_form(form) }}
+{% endif %}
+{% endblock %}
