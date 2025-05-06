@@ -1,0 +1,139 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.main-container {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.navbar-inverse {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #d4d4d4;
+}
+
+.page-header {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.page-header h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.alert {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: opacity 5.0s ease-out;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+form {
+    margin-top: 15px;
+    padding: 20px; /* Adiciona preenchimento interno */
+    background-color: #f9f9f9; /* Define uma cor de fundo suave */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
+    border-radius: 8px; /* Adiciona cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+form .btn {
+    background-color: #28a745;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background-color: #218838;
+}
+
+/* Tabela */
+.table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+}
+
+.table-bordered th {
+    background-color: #f8f9fa;
+    color: #495057;
+    text-align: left;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+
+
+

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificação de E-mail</title>
+</head>
+<body>
+    <p>Olá, {{ username }}!</p>
+    <p>Para confirmar sua conta, por favor, clique no link abaixo:</p>
+    <p><a href="{{ url_for('auth.confirm', token=token, _external=True) }}">Verificar E-mail</a></p>
+    <p>Se você não solicitou esta verificação, por favor ignore este e-mail.</p>
+</body>
+</html>

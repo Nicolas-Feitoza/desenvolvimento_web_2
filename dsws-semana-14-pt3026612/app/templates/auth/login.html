@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - Login{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Login</h1>
+</div>
+<div class="container">
+    <div class="main-container">
+        {{ wtf.quick_form(form) }}
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category or 'info'}}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    <br>
+    <p><a href="{{ url_for('auth.password_reset_request') }}">Esqueci a Senha</a>
+    <p>Novo por aqui? <a href="{{ url_for('auth.register') }}">Clique aqui para registrar</a></p>
+    <p>Caso seu e-mail não seja verificado pelo administrador, contate: <a href="mailto:nicolas.feitoza@zohomail.com">nicolas.feitoza@zohomail.com</a></p>
+    </div>
+</div>
+{% endblock %}

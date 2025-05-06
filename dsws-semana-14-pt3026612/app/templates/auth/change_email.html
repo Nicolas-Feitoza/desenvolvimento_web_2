@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - Mudar endereço de email{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Mude seu endereço de email</h1>
+</div>
+<div class="container">
+    <div class="main-container">
+        {{ wtf.quick_form(form) }}
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category or 'info'}}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Olá, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Viajante{% endif %}!</h1>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    {% if current_user.is_authenticated %}
+        <img src="https://nicolassf.pythonanywhere.com/static/images/um_de_nos.gif" alt="usuário autenticado" style="width: 320px; height: auto;">
+    {% else %}
+        <video style="width: 480px; height: auto;" controls autoplay muted>
+            <source src="https://nicolassf.pythonanywhere.com/static/images/dragao.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    {% endif %}
+</div>
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category or 'info'}}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+{% endblock %}
